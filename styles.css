@@ -353,6 +353,103 @@ a.car:hover { border-color: #c9c1b4; }
 .steps h3 { font-size: 1.05rem; }
 .steps p { margin-top: 0.2rem; color: var(--muted); }
 
+.motor {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1rem 1.05rem;
+}
+.motor-yes {
+  border: 2px solid var(--yes);
+  background: #f4fbf6;
+}
+.motor header { margin-bottom: 0.35rem; }
+.motor h3 {
+  margin-top: 0.45rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+.motor .code {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.motor ul {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+.motor li { padding-top: 0.45rem; border-top: 1px solid var(--line); }
+.motor-rest {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+.motor-rest p { margin-top: 0.4rem; }
+
+.rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.rules li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--yes);
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+}
+
+.qa {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  counter-reset: q;
+  display: grid;
+  gap: 0.65rem;
+}
+.qa li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem 1rem 1rem;
+}
+.qa h3 {
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+.qa h3::before {
+  counter-increment: q;
+  content: counter(q) ". ";
+  color: var(--muted);
+}
+.qa p { margin-top: 0.4rem; }
+.qa .good b { color: var(--yes); }
+.qa .bad b { color: var(--no); }
+.qa .where { color: var(--muted); font-size: 0.92rem; }
+
+.probs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.2rem 1rem;
+}
+.probs li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+}
+.probs li:first-child { border-top: 0; }
+.probs span { color: var(--muted); }
+
 .liters {
   font-size: 1.15em;
   letter-spacing: -0.05em;
@@ -483,6 +580,8 @@ a.car:hover { border-color: #c9c1b4; }
   .needs { grid-template-columns: 1fr 1fr; }
   .call { grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 1.2rem; }
   .gallery { grid-template-columns: 1fr 1fr; }
+  .motor-rest { grid-template-columns: 1fr 1fr; }
+  .rules { grid-template-columns: 1fr 1fr; }
   .except { grid-template-columns: 1fr 1fr; }
   .block-h { grid-template-columns: 1.15fr 0.85fr; align-items: end; gap: 1.5rem; }
 }
